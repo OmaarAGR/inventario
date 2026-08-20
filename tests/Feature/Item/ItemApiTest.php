@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Item;
+use App\Domain\Item\Models\Item;
 
 it('lists items', function () {
     Item::factory()->count(3)->create();

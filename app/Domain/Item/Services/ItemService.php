@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services;
+namespace App\Domain\Item\Services;
 
-use App\Models\Item;
+use App\Domain\Item\Models\Item;
 
 class ItemService
 {

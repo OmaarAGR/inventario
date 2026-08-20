@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Domain\Item\Http\Controllers;
 
+use App\Domain\Item\Http\Requests\StoreItemRequest;
+use App\Domain\Item\Http\Requests\UpdateItemRequest;
+use App\Domain\Item\Http\Resources\ItemResource;
+use App\Domain\Item\Models\Item;
+use App\Domain\Item\Services\ItemService;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreItemRequest;
-use App\Http\Requests\UpdateItemRequest;
-use App\Http\Resources\ItemResource;
-use App\Models\Item;
-use App\Services\ItemService;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 
