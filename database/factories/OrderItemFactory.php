@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class OrderItemFactory extends Factory
 {
+    protected $model = OrderItem::class;
+
     public function definition(): array
     {
         $quantity = $this->faker->numberBetween(1, 5);
