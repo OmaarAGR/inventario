@@ -2,9 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Enums\InvoiceStatus;
-use App\Models\Invoice;
-use App\Models\Order;
+use App\Domain\Invoice\Enums\InvoiceStatus;
+use App\Domain\Invoice\Models\Invoice;
+use App\Domain\Order\Models\Order;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class InvoiceFactory extends Factory
 {
+    protected $model = Invoice::class;
+
     public function definition(): array
     {
         return [

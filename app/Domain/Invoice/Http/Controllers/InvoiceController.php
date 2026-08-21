@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Domain\Invoice\Http\Controllers;
 
+use App\Domain\Invoice\Http\Requests\StoreInvoiceRequest;
+use App\Domain\Invoice\Http\Resources\InvoiceResource;
+use App\Domain\Invoice\Models\Invoice;
+use App\Domain\Invoice\Services\InvoiceService;
+use App\Domain\Order\Models\Order;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreInvoiceRequest;
-use App\Http\Resources\InvoiceResource;
-use App\Models\Invoice;
-use App\Models\Order;
-use App\Services\InvoiceService;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class InvoiceController extends Controller

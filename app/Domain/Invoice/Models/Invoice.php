@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Models;
+namespace App\Domain\Invoice\Models;
 
-use App\Enums\InvoiceStatus;
+use App\Domain\Invoice\Enums\InvoiceStatus;
+use App\Domain\Order\Models\Order;
 use Database\Factories\InvoiceFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -38,5 +39,10 @@ class Invoice extends Model
     public function order(): BelongsTo
     {
         return $this->belongsTo(Order::class);
+    }
+
+    protected static function newFactory(): InvoiceFactory
+    {
+        return InvoiceFactory::new();
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Services;
+namespace App\Domain\Invoice\Services;
 
-use App\Enums\InvoiceStatus;
-use App\Enums\OrderStatus;
-use App\Exceptions\InvalidOrderStateException;
-use App\Models\Invoice;
-use App\Models\Order;
+use App\Domain\Invoice\Enums\InvoiceStatus;
+use App\Domain\Invoice\Models\Invoice;
+use App\Domain\Order\Enums\OrderStatus;
+use App\Domain\Order\Exceptions\InvalidOrderStateException;
+use App\Domain\Order\Models\Order;
 use Illuminate\Support\Facades\DB;
 
 class InvoiceService

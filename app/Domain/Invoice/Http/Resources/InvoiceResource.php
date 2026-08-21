@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Resources;
+namespace App\Domain\Invoice\Http\Resources;
 
-use App\Models\Invoice;
+use App\Domain\Invoice\Models\Invoice;
+use App\Domain\Order\Http\Resources\OrderResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 

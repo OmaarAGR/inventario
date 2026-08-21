@@ -1,9 +1,9 @@
 <?php
 
-use App\Enums\InvoiceStatus;
-use App\Enums\OrderStatus;
-use App\Models\Invoice;
-use App\Models\Order;
+use App\Domain\Invoice\Enums\InvoiceStatus;
+use App\Domain\Invoice\Models\Invoice;
+use App\Domain\Order\Enums\OrderStatus;
+use App\Domain\Order\Models\Order;
 
 it('generates an invoice from a confirmed order', function () {
     $order = Order::factory()->confirmed()->create(['total' => 150]);
