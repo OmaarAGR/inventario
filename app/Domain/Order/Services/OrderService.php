@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Services;
+namespace App\Domain\Order\Services;
 
-use App\Enums\OrderStatus;
-use App\Exceptions\InsufficientStockException;
-use App\Exceptions\InvalidOrderStateException;
-use App\Models\Item;
-use App\Models\Order;
+use App\Domain\Item\Models\Item;
+use App\Domain\Order\Enums\OrderStatus;
+use App\Domain\Order\Exceptions\InsufficientStockException;
+use App\Domain\Order\Exceptions\InvalidOrderStateException;
+use App\Domain\Order\Models\Order;
 use Illuminate\Support\Facades\DB;
 
 class OrderService

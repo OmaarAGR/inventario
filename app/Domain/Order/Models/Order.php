@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Models;
+namespace App\Domain\Order\Models;
 
-use App\Enums\OrderStatus;
+use App\Domain\Invoice\Models\Invoice;
+use App\Domain\Order\Enums\OrderStatus;
 use Database\Factories\OrderFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -46,5 +47,10 @@ class Order extends Model
     public function invoice(): HasOne
     {
         return $this->hasOne(Invoice::class);
+    }
+
+    protected static function newFactory(): OrderFactory
+    {
+        return OrderFactory::new();
     }
 }

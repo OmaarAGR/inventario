@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Exceptions;
+namespace App\Domain\Order\Exceptions;
 
-use App\Models\Order;
+use App\Domain\Order\Models\Order;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;

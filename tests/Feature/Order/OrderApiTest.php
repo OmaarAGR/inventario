@@ -1,8 +1,8 @@
 <?php
 
-use App\Enums\OrderStatus;
-use App\Models\Item;
-use App\Models\Order;
+use App\Domain\Item\Models\Item;
+use App\Domain\Order\Enums\OrderStatus;
+use App\Domain\Order\Models\Order;
 
 it('creates an order with items and computes the total', function () {
     $item = Item::factory()->create(['price' => 10, 'stock' => 50]);

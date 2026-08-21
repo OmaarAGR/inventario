@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace App\Domain\Order\Models;
 
+use App\Domain\Item\Models\Item;
 use Database\Factories\OrderItemFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -43,5 +44,10 @@ class OrderItem extends Model
     public function item(): BelongsTo
     {
         return $this->belongsTo(Item::class);
+    }
+
+    protected static function newFactory(): OrderItemFactory
+    {
+        return OrderItemFactory::new();
     }
 }

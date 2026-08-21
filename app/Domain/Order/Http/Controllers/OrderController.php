@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Domain\Order\Http\Controllers;
 
+use App\Domain\Order\Http\Requests\StoreOrderRequest;
+use App\Domain\Order\Http\Resources\OrderResource;
+use App\Domain\Order\Models\Order;
+use App\Domain\Order\Services\OrderService;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreOrderRequest;
-use App\Http\Resources\OrderResource;
-use App\Models\Order;
-use App\Services\OrderService;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class OrderController extends Controller
